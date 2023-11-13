@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Recommendation System</h1>
+    </header>
+    <main>
+        <form id="recipe-form">
+            <label for="dietary-restrictions">Dietary Restrictions:</label>
+            <select id="dietary-restrictions" name="dietary-restrictions">
+                <option value="">Select One</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten-Free</option>
+            </select>
+            <label for="favorite-ingredients">Favorite Ingredients:</label>
+            <input type="text" id="favorite-ingredients" name="favorite-ingredients">
+            <label for="favorite-cuisines">Favorite Cuisines:</label>
+            <input type="text" id="favorite-cuisines" name="favorite-cuisines">
+            <button type="submit">Get Recipe Recommendations</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

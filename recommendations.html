@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1>Recommendations</h1>
+    {% for recipe in recommendations %}
+    <div>
+        <h3>{{ recipe.title }}</h3>
+        <p><strong>Source URL:</strong> <a href="{{ recipe.sourceUrl }}">{{ recipe.sourceUrl }}</a></p>
+        <p><strong>Vegetarian:</strong> {{ recipe.vegetarian }}</p>
+        <p><strong>Vegan:</strong> {{ recipe.vegan }}</p>
+        <p><strong>Gluten Free:</strong> {{ recipe.gluten_free }}</p>
+        <p><strong>Dairy Free:</strong> {{ recipe.dairy_free }}</p>
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+            {% for ingredient in recipe.ingredients %}
+            <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</body>
+</html>
